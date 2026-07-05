@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mpro_screen"
+version = "0.1.0"
+description = "Screening pipeline for RFdiffusion/ProteinMPNN/ColabFold binder designs against SARS-CoV-2 Mpro"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "pandas", "matplotlib"]
+
+[project.scripts]
+mpro-screen = "mpro_screen.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["mpro_screen*"]
